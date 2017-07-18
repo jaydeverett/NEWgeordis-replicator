@@ -8,7 +8,6 @@ class Transporter
     @enterprise = enterprise
     @power = false
     connect_to_power
-    obriens_repairs_transporter
   end
 
   def connect_to_power

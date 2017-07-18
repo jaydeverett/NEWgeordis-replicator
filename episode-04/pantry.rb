@@ -8,7 +8,6 @@ class Pantry
   def initialize
     @shelf = Location.new
     stock_shelf
-    tribbles_eat_food
   end
 
   def shelf

@@ -1,3 +1,5 @@
+require 'pry'
+
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -100,6 +102,7 @@ class Replicator
     # and then into the `contents` of that instance, which is an array
     # and obtains the first element of that array.
     @inside_replicator.contents.first
+
   end
 
   # This transports ingredients into the glass.
@@ -117,6 +120,7 @@ class Replicator
         glass_inside_replicator.inside
       )
     end
+
   end
 
   # This mixes the ingredients around inside the replicator.
@@ -125,7 +129,6 @@ class Replicator
     # Abort if there is no glass inside the replicator or no power.
     return unless glass_inside_replicator && @power
 
-    mouse_chews_through_power_cord
 
     # Draw power if possible and then mix ingredients around.
     if @enterprise.reactor.draw_power(3)
@@ -136,6 +139,8 @@ class Replicator
   # This adjusts the temperature of the glass to
   # what the recipes calls for.
   def adjust_temperature
+
+
 
     # Abort if there is no glass inside the replicator or no power.
     return unless glass_inside_replicator && @power
@@ -150,6 +155,9 @@ class Replicator
     desired_temperature         = @recipe.temperature
     maximum_adjustments_allowed = 50
     number_of_adjustments       = 0
+
+
+
 
     # Keep adjusting temperature until desired temperature is reached
     # or too many attempts have been made to adjust temperature.
@@ -167,6 +175,8 @@ class Replicator
       number_of_adjustments += 1
 
     end
+
+
 
     # Transport glass from reactor back to inside the replicator.
     # If successful, @enterprise.reactor.core will now be empty

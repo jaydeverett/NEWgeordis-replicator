@@ -1,3 +1,4 @@
+require 'pry'
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -146,7 +147,7 @@ class Replicator
 
     # Setup variables for temperature adjustment loop
     desired_temperature         = @recipe.temperature
-    maximum_adjustments_allowed = 50
+    maximum_adjustments_allowed = 70
     number_of_adjustments       = 0
 
     # Keep adjusting temperature until desired temperature is reached
@@ -170,6 +171,7 @@ class Replicator
     # If successful, @enterprise.reactor.core will now be empty
     # and @inside_replicator will once again contain the glass.
     # transport_glass_from_reactor
+    transport_glass_from_reactor
 
   end
 
